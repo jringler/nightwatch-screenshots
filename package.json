@@ -1,8 +1,8 @@
 {
   "name": "nightwatch_screenshots",
   "version": "1.0.0",
-  "description": "",
-  "main": "screenshots.js",
+  "description": "Using Nightwatch.js to navigate through a list of URL's or landing pages (stored in a JSON document) and take a screenshot of each page.",
+  "main": "landingPagesScreenshots.js",
   "scripts": {
     "test": "nightwatch --env web",
     "test-mobile": "nightwatch --env mobile-web",
