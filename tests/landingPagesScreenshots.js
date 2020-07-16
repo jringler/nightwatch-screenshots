@@ -2,18 +2,19 @@ require('dotenv').config()
 
 module.exports = {
 
-  'Taking a screenshots of all active landing pages': function (browser) {
+  'Taking a screenshot of all active landing pages': function (browser) {
 
       var campaigns = require('../campaigns.json');
+      var testType = browser.options.desiredCapabilities.browserName;
 
       for(let partner in campaigns) {
         var url = campaigns[partner].landing_page;
         browser
           .url(process.env.HOST + url)
           .waitForElementVisible('body', 10000,'Navigating to landing page: ' + url)
-          .waitForElementVisible('.logoLink', 10000)
+          .waitForElementVisible('a.navLink.logIn', 10000)
           .pause(2000)
-          .saveScreenshot('./screenshots' + url + '.png')
+          .saveScreenshot(`./screenshots-${testType}` + url + `.png`)
       }
 
       browser.end()
