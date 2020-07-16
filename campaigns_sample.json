@@ -1,0 +1,15 @@
+[
+	{
+		"access_code": "Amazon Prime",
+		"active": true,
+		"campaign_name": "amazon-prime",
+		"landing_page": "/amazonprime",
+		"landing_page_type": "consumer"
+	},
+	{
+		"access_code": "Amazon Whole Foods",
+		"active": true,
+		"campaign_name": "amazon-whole-foods",
+		"landing_page": "/b?ie=UTF8&node=17235386011"
+	}
+]
